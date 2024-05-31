@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/bag/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=100,mechanical</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=75,mechanical</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=65,mechanical</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=60,mechanical</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=40,mechanical</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=100,75,65,60,40,mechanical</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=abs</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=pbt</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=rubber</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=custom_made</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=abs,pbt,rubber,custom_made</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=switches</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=cables</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=tools</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=switches,cables,tools</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?deal=true</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/blog/blog/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/contact/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/46/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/44/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/43/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/42/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/blog/post_detail/keycaps-material-profile-and-beyond/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/blog/post_detail/the-best-mechanical-keyboards/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/blog/post_detail/abs-vs-pbt-keycap-materials-you-should-know/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/warranty-policy/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/contact-form/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/company/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/partners/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/return-policy/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/shipping-policy/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/payments/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/privacy-policy/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/terms-of-service/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/40/</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=65</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=100</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=75</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=60</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/products/?category=40</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/blog/blog/?sort=created_on&amp;direction=desc</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/blog/blog/?sort=created_on&amp;direction=asc</loc>
+  <lastmod>2023-12-18T03:01:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

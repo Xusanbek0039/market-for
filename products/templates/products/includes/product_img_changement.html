@@ -1,0 +1,37 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var smallImagesContainer = document.getElementById('smallImages');
+        var mainImage = document.querySelector('.mainImage');
+
+        if (smallImagesContainer && mainImage) {
+            smallImagesContainer.addEventListener('click', function (event) {
+                if (event.target.tagName === 'IMG') {
+                    // Remove 'selected' class from all small images
+                    var allSmallImages = document.querySelectorAll('.small-images img');
+                    allSmallImages.forEach(function (img) {
+                        img.classList.remove('selected');
+                    });
+
+                    // Add 'selected' class to the clicked small image
+                    event.target.classList.add('selected');
+
+                    // Change the main image source to the clicked small image source
+                    mainImage.src = event.target.src;
+                }
+            });
+        }
+        
+        // ClickEvent for current mainImage
+        if (mainImage) {
+            mainImage.addEventListener('click', function(event) {
+                openInNewTab(mainImage.src);
+            });
+        }
+
+        // Opens the current mainImage in a new tab and focus
+        function openInNewTab(imageUrl) {
+            var newTab = window.open(imageUrl, '_blank');
+            newTab.focus();
+        }
+    });
+</script>

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Articles {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div> <!-- Making overlay over the background image to white background instead -->
+    <div class="container main-content-container h-100">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12 bg-black text-white custom-div-height d-flex justify-content-center align-items-center">
+                        <div class="body-header">
+                        <h1 data-heading="i">Art<span class="hidden-letter">i</span>cles</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5"> 
+                    <div class="container">
+                        <div class="col-12 d-flex justify-content-md-end justify-content-center mt-2">
+                            <a href="{% url 'blog' %}?sort=created_on&direction=desc" class="mr-3">Newest</a>
+                            <a href="{% url 'blog' %}?sort=created_on&direction=asc">Oldest</a>
+                        </div>
+                    </div>
+                </div>
+                {% for post in posts %}  
+                    <div class="post-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                {% if post.featured_image %} <!-- Image rendering -->
+                                <a href="{% url 'post_detail' post.slug %}">
+                                    <img class="img-fluid blog-img-responsive" src="{{ post.featured_image.url }}" alt="article image"></a>
+                                {% else %}
+                                    <a href="{% url 'post_detail' post.slug %}">
+                                    <img class="img-fluid blog-img-responsive" src="{% static 'images/article-default_img.webp' %}" alt="{{ product.name }}">
+                                    </a>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{% url 'post_detail' post.slug %}" class="text-dark post-font-title"><h3>{{ post.title }}</h3></a>
+                                <p class="text-muted post-font-text">Published {{ post.created_on|date:"F j Y"}}</p>
+                                <p class="post-font-text">{{ post.excerpt }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                {% empty %}
+                    <div class="container text-center mt-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>You haven't created any posts yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        
+            {% if is_paginated %}<!-- Pagination styling and calculation -->
+                <div class="row pagination-container">
+                    <div class="col-12 d-flex justify-content-center">
+                        {% include "blog/includes/pagination.html" %}
+                    </div>
+                </div>
+            {% endif %}
+    </div>
+
+    <div class="btt-button shadow-sm rounded-0 border border-black"> <!-- Scroll back up button -->
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>    
+    </div>
+
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+        <!-- Scroll to top-->
+        <script>
+            $('.btt-link').click(function(e) {
+                window.scrollTo(0,0);
+            })
+        </script>
+{% endblock %}

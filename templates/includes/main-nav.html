@@ -1,0 +1,77 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All <i class="fa-solid fa-caret-down fa-xs"></i>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="keyboards-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Keyboards <i class="fa-solid fa-caret-down fa-xs"></i>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="keyboards-link">
+                <a href="{% url 'products' %}?category=100,mechanical" class="dropdown-item">100% Layout</a>
+                <a href="{% url 'products' %}?category=75,mechanical" class="dropdown-item">75% Layout</a>
+                <a href="{% url 'products' %}?category=65,mechanical" class="dropdown-item">65% Layout</a>
+                <a href="{% url 'products' %}?category=60,mechanical" class="dropdown-item">60% Layout</a>
+                <a href="{% url 'products' %}?category=40,mechanical" class="dropdown-item">40% Layout</a>
+                <a href="{% url 'products' %}?category=100,75,65,60,40,mechanical" class="dropdown-item">All Keyboards</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="keycaps-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Keycaps <i class="fa-solid fa-caret-down fa-xs"></i>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="keycaps-link">
+                <a href="{% url 'products' %}?category=abs" class="dropdown-item">ABS caps</a>
+                <a href="{% url 'products' %}?category=pbt" class="dropdown-item">PBT caps</a>
+                <a href="{% url 'products' %}?category=rubber" class="dropdown-item">Rubber caps</a>
+                <a href="{% url 'products' %}?category=custom_made" class="dropdown-item">Custom made</a>
+                <a href="{% url 'products' %}?category=abs,pbt,rubber,custom_made" class="dropdown-item">All Keycaps</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Accessories <i class="fa-solid fa-caret-down fa-xs"></i>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
+                <a href="{% url 'products' %}?category=switches" class="dropdown-item">Switches</a>
+                <a href="{% url 'products' %}?category=cables" class="dropdown-item">Cables</a>
+                <a href="{% url 'products' %}?category=tools" class="dropdown-item">Tools</a>
+                <a href="{% url 'products' %}?category=switches,cables,tools" class="dropdown-item">All Accessories</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?deal=true" id="articles-link">
+                Deals
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog' %}" id="blog-link">
+                Articles
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}" id="support-link">
+                Support
+            </a>
+        </li>
+    </ul>
+</div>

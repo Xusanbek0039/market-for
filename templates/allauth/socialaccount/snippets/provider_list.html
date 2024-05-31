@@ -1,0 +1,32 @@
+{% load socialaccount %}
+
+{% get_providers as socialaccount_providers %}
+
+{% for provider in socialaccount_providers %}
+  {% if provider.id == "openid" %}
+    {% for brand in provider.get_brands %}
+      <li>
+        <a title="{{brand.name}}" 
+           class="socialaccount_provider {{provider.id}} {{brand.id}}" 
+           href="{% provider_login_url provider.id openid=brand.openid_url process=process %}"
+        >{{brand.name}}</a>
+      </li>
+    {% endfor %}
+  {% elif provider.id == "google" %}
+    <li>
+      <a title="{{provider.name}}" class="form-submit-bt social-btn-social-login google-login google btn social-btn" 
+         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fa fa-google fa-lg">
+        </i> LogIn with Google</a>
+    </li>
+  {% elif provider.id == "github" %}
+    <li>
+      <a title="{{provider.name}}" class="btn github-login github social-btn-social-login" 
+         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fa-brands fa-github fa-lg"></i> LogIn with Github</a>
+    </li>
+  {% else %}
+    <li>
+      <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}" 
+         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">{{provider.name}}</a>
+    </li>
+  {% endif %}
+{% endfor %}

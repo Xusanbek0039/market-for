@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} 500 {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!-- Error handler 500 page -->
+    <section>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <hr>
+                    <h2 class="logo-font mb-4">Error</h2>
+                    <h5 class="text-muted">500 Message</h5>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h1>"Internal Server Error"</h1>
+                    <h3>Houston, we have a problem! Our server is doing the robot dance. Time to gracefully bow out and return to the cosmic dance floor!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

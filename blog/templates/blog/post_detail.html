@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block extra_title %} - {{ post.title }} {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="blog-single bg-clr-dom">
+        <div class="container">
+            <div class="row align-items-start justify-content-center">
+                <div class="col-lg-8 m-15px-tb">
+                    <!-- Article Section -->
+                    <article class="article text-white">
+                        <div class="article-img img-responsive">
+                            {% if post.featured_image %} <!-- Image rendering -->
+                            <img src="{{ post.featured_image.url }}"
+                                style="width: 100%; height: auto;" alt="article image">
+                            {% else %}
+                            <img src="{% static 'images/article-default_img.webp' %}" style="width: 100%; height: auto;" alt="article image">
+                            {% endif %}
+                        </div>
+                        <div class="article-title mt-3">
+                            <h2>{{ post.title }}</h2>
+                            <div class="media">
+                                <div class="media-body">
+                                    <label class="text-secondary">{{ post.author }} | {{ post.created_on|date:"F j Y"}}</label>
+                                    <small>
+                                        <!-- Check if user is superuser to be able to edit and delete Article -->
+                                        {% if request.user.is_superuser %}
+                                        | <a class="text-secondary fw-bolder custom-word-spacing"
+                                            href="{% url 'post_edit' post.slug %}">
+                                            &#160;<i class="fas fa-edit"></i> Edit </a>&#160; | &#160;
+                                        <a class="text-secondary fw-bolder custom-word-spacing"
+                                            href="{% url 'post_delete' post.slug %}">
+                                            <i class="fas fa-trash-alt"></i> Delete </a>&#160; |
+                                        {% endif %}
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article-content text-black">
+                            <!-- Safe is used to show HTML throught the post content -->
+                            {{ post.content | safe }}
+                        </div>
+                    </article>
+                    <a href="{% url 'blog' %}" class="btn btn-black rounded-0"> Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btt-button shadow-sm rounded-0 border border-black"> <!-- Scroll back up button -->
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+        <!-- Scroll to top-->
+        <script>
+            $('.btt-link').click(function (e) {
+                window.scrollTo(0, 0);
+            })
+        </script>
+{% endblock %}

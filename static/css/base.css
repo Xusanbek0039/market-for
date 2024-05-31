@@ -1,0 +1,724 @@
+/* Base stylesheet for the base template and main project folder */
+
+html {
+  height: 100%;
+}
+
+.material-icons.md-34 { font-size: 34px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  background: white;
+  background-size: cover;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.opacity-img {
+  opacity: 0.5;
+}
+
+.sort-select-wrapper i:hover {
+  color: black;
+}
+
+/* ----------------------------------- Cycle Odd and Even class bg color */
+.even {
+  background-color: #f2f2f2; 
+}
+
+.odd {
+  background-color: #ffffff;
+}
+
+/* ----------------------------------- from Bulma */
+.icon { /* will make all icons display perfectly */
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.nav-link {
+  white-space: nowrap;
+}
+
+.logo-font {
+  text-transform: uppercase;
+}
+
+.main-logo-link {
+  width: fit-content;
+}
+
+.shop-now-button {
+  background: black;
+  color: white;
+  min-width: 260px;
+}
+
+.btn-black {
+  background: black;
+  color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+  background: #222;
+  color: white;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.border-black {
+  border: 1px solid black !important;
+}
+
+.bg-black {
+  Background: #000 !important;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: linear-gradient(rgb(253, 253, 253), rgb(243, 243, 243), rgb(229, 229, 229), rgb(235, 235, 235), rgb(238, 238, 238), rgb(255, 255, 255));
+  z-index: -1;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.image-fit {
+  object-fit: cover;
+  width: 100%;
+  height: 230px;
+}
+
+.card-category:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-category {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+}
+
+.custom-bg-bg {
+  background: linear-gradient(rgb(253, 253, 253), rgb(243, 243, 243), rgb(229, 229, 229), rgb(235, 235, 235), rgb(238, 238, 238), rgb(255, 255, 255));
+}
+
+.header-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/media/blog-header.png');
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container-newsletter{
+  border: 2px solid black;
+}
+
+.section-margin-bottom {
+  margin-bottom: 150px;
+}
+
+a.category-badge > span.badge:hover {
+  background: #212529 !important;
+  color: #fff !important;
+}
+
+.btt-button {
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  background-color: white;
+  bottom: 10px;
+  right: 10px;
+}
+
+.btt-link {
+  cursor: pointer;
+}
+
+.main-content-container {
+  min-height: 60vh;
+}
+
+.btn-outline-black {
+  background: white;
+  color: black !important;
+  border: 1px solid black;
+}
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+  background: black;
+  color: white !important;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+  cursor: pointer;
+}
+
+input[name='q']::placeholder {
+  color: #aab7c4;
+}
+
+/* ----------------------------------- Allauth form formatting */
+.allauth-form-inner-content p {
+  color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content label[for='id_remember'] {
+  display: inline;
+  color: transparent;
+  margin: -25px;
+  padding: 0;
+}
+
+.allauth-form-inner-content #id_remember {
+  display: none;
+  margin: -25px;
+  padding: 0;
+}
+
+.allauth-form-inner-content input {
+  border-color: #000;
+  border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+  display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+  color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+  /* btn */
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #000;
+  border: 1px solid #000;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0;
+  /* standard bootstrap btn transitions */
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {    
+  color: #fff;
+  background-color: #222;
+}
+
+/* ----------------------------------- Toasts */
+.bag-notification-wrapper {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.message-container {
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 2px;
+}
+
+.arrow-up { /* from: https://css-tricks.com/snippets/css/css-triangle */
+  width: 0; 
+  height: 0; 
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent; 
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  right: 36px;
+}
+
+.arrow-primary { /* Convenience classes - copied from Bootstrap */
+  border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+  border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+  border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+  border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+  border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+  border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+  border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+  border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ----------------------------------- Product */
+.overlay-oos {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 65, 65, 0.445);
+    z-index: 98;
+}
+
+.product-contain1.grid-view .image-container {
+  position: relative;
+  max-width: 100%;  /* Adjust this value based on your layout needs */
+  margin: 0 auto;
+}
+
+.product-contain1.list-view .image-container {
+  position: relative;
+  max-width: 100%;  /* Adjust this value based on your layout needs */
+  margin: 0 auto;
+}
+
+.product-contain1.list-view .deal-mark {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,123,255);
+  width: 75px;
+  height: 50px;
+  color: white;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5px;
+}
+
+.deal-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,123,255);
+  width: 75px;
+  height: 50px;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  margin: 5px;
+}
+
+/* ----------------------------------- Product Form */
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: 0;
+  border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: #dc3545;
+  border-radius: 0;
+}
+
+/* ----------------------------------- Footer */
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#000000;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  margin-bottom: 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.5;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+/* -------------------------------- LogIn/Register form */
+.form-container-social-login {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.form-container-social-login button:active {
+  transform: scale(0.95);
+}
+
+.form-container-social-login .logo-container-social-login {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.form-container-social-login .form-social-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container-social-login .form-group-social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container-social-login .form-group-social-login label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container-social-login .form-group-social-login input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+}
+
+.form-container-social-login .form-group-social-login input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container-social-login .form-group-social-login input:focus {
+  outline: none;
+  border-color: #1778f2;
+}
+
+.form-container-social-login .form-submit-btn-social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  color: #fff;
+  background-color: #212121;
+  border: none;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin: 12px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+}
+
+.google-login {
+  color: #ffffff;
+  background-color: red; 
+}
+
+.github-login {
+  color: #ffffff;
+  background-color: black; 
+}
+
+.prink-link {
+  text-align: end;
+  text-decoration: underline;
+}
+
+.social-btn-social-login, .form-container-social-login ul {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  list-style: none;
+  text-decoration: none; 
+}
+
+.form-container-social-login .form-submit-btn-social-login:hover {
+  background-color: #313131;
+}
+
+.form-container-social-login .link {
+  color: #1778f2;
+  text-decoration: none;
+}
+
+.form-container-social-login .signup-link {
+  align-self: center;
+  font-weight: 500;
+}
+
+.form-container-social-login .signup-link .link {
+  font-weight: 400;
+}
+
+.form-container-login .link:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------- Media Queries */
+@media only screen and (max-width: 1199px) {
+  .subscription-form input.form-control,
+  .subscription-form button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+  .fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
+  .header-container {
+    padding-top: 194px;
+  }
+
+  .header-container-index {
+    padding-top: 103px;
+  }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+/* This is often used to ensure that the page content fits 
+within the viewport, and the top padding (116px) 
+is subtracted from the available height */
+@media (max-width: 991px) {
+  .header-container {
+    padding-top: 116px;
+  }
+
+  .smaller-text {
+    font-size: 14px;
+  }
+
+  /* Makes the class with all this exactly classes be effected */
+  .display-4.logo-font.text-black {
+    font-size: 2rem;
+  }
+
+  /*Fix the navbar issue on mobile screens */
+  .nav-link { 
+    padding: 0.15rem;
+  }
+
+  .nav-link i.fa-lg {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    padding: .6rem .6rem;
+    font-size: 1rem;
+  }
+
+  #delivery-banner h4 {
+    font-size: .9rem;
+  }
+
+  /* Makes the class with all this exactly classes be effected */
+  .btn.btn-outline-black.rounded-0,
+  .btn.btn-black.rounded-0 {
+    padding: .375rem .375rem;
+  }
+  
+  /* Makes the class with all this exactly classes be effected */
+  .btn.btn-outline-black.rounded-0.btn-lg,
+  .btn.btn-black.rounded-0.btn-lg {
+    padding: .375rem .375rem;
+    font-size: .75rem;
+  }
+
+  .increment-qty, .decrement-qty {
+    padding: .25rem .5rem !important;
+  }
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+@media (max-width:375px) {
+  #sort-selector {
+    width: 100%;
+  }
+}
+
+@media (max-width:576px) {
+  .sort-select-wrapper i {
+    display: none;
+  }
+}
+
+@media (min-width:576px) {
+  .card-img-top {
+    max-width: 350px; 
+    max-height: 350px; 
+  }
+}

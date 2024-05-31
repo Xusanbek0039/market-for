@@ -1,0 +1,218 @@
+{% load static %}
+<div id="reviews" class="review-section">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <h4 class="m-0">{{ review_count }} Product reviews</h4>
+        <select class="custom-select custom-select-sm border-0 shadow-sm ml-2 select2-hidden-accessible" id="most_recent_dropdown" data-select2-id="1" tabindex="-1" aria-hidden="true">
+            <option data-select2-id="3">Most Relevant</option>
+            <option>Most Recent</option>
+        </select>
+        <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 188px;">
+            <span class="selection">
+                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-qd66-container">
+                    <span class="select2-selection__rendered" id="select2-qd66-container" role="textbox" aria-readonly="true" title="Most Relevant">Most Relevant</span>
+                    <span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>
+                </span>
+            </span>
+            <span class="dropdown-wrapper" aria-hidden="true"></span>
+        </span>
+    </div>     
+    <div class="row">
+        <div class="col-md-6">
+            <table class="stars-counters mb-5-sm">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>
+                                <button class="fit-button fit-button-color-blue fit-button-fill-ghost fit-button-size-medium stars-filter" disabled>5 Stars</button>
+                            </span>
+                        </td>
+                        <td class="progress-bar-container">
+                            <div class="fit-progressbar fit-progressbar-bar star-progress-bar">
+                                <div class="fit-progressbar-background">
+                                    {% if five_star_percentage > 0 %}
+                                        <span class="progress-fill" style="width: {{ five_star_percentage }}%;"></span>
+                                    {% else %}
+                                        <span class="progress-fill" style="width: 0;"></span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="star-num">( {{ five_star_count }} )</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                <button class="fit-button fit-button-color-blue fit-button-fill-ghost fit-button-size-medium stars-filter" disabled>4 Stars</button>
+                            </span>
+                        </td>
+                        <td class="progress-bar-container">
+                            <div class="fit-progressbar fit-progressbar-bar star-progress-bar">
+                                <div class="fit-progressbar-background">
+                                    {% if four_star_percentage > 0 %}
+                                    <span class="progress-fill" style="width: {{ four_star_percentage }}%;"></span>
+                                    {% else %}
+                                        <span class="progress-fill" style="width: 0;"></span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="star-num">( {{ four_star_count }} )</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                <button class="fit-button fit-button-color-blue fit-button-fill-ghost fit-button-size-medium stars-filter" disabled>3 Stars</button>
+                            </span>
+                        </td>
+                        <td class="progress-bar-container">
+                            <div class="fit-progressbar fit-progressbar-bar star-progress-bar">
+                                <div class="fit-progressbar-background">
+                                    {% if three_star_percentage > 0 %}
+                                    <span class="progress-fill" style="width: {{ three_star_percentage }}%;"></span>
+                                    {% else %}
+                                        <span class="progress-fill" style="width: 0;"></span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="star-num">( {{ three_star_count }} )</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                <button class="fit-button fit-button-color-blue fit-button-fill-ghost fit-button-size-medium stars-filter" disabled>2 Stars</button>
+                            </span>
+                        </td>
+                        <td class="progress-bar-container">
+                            <div class="fit-progressbar fit-progressbar-bar star-progress-bar">
+                                <div class="fit-progressbar-background">
+                                    {% if two_star_percentage > 0 %}
+                                    <span class="progress-fill" style="width: {{ two_star_percentage }}%;"></span>
+                                    {% else %}
+                                        <span class="progress-fill" style="width: 0;"></span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="star-num">( {{ two_star_count }} )</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                <button class="fit-button fit-button-color-blue fit-button-fill-ghost fit-button-size-medium stars-filter" disabled>1 Stars</button>
+                            </span>
+                        </td>
+                        <td class="progress-bar-container">
+                            <div class="fit-progressbar fit-progressbar-bar star-progress-bar">
+                                <div class="fit-progressbar-background">
+                                    {% if one_star_percentage > 0 %}
+                                    <span class="progress-fill" style="width: {{ one_star_percentage }}%;"></span>
+                                    {% else %}
+                                        <span class="progress-fill" style="width: 0;"></span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="star-num">( {{ one_star_count }} )</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <div class="ranking">
+                <h6 class="text-display-7">Rating Breakdown</h6>
+                <ul>
+                    <li>
+                        Product quality<span>5<span class="review-star rate-10 show-one"></span></span>
+                    </li>
+                    <li>
+                        Recommend to a friend<span>3<span class="review-star rate-10 show-one"></span></span>
+                    </li>
+                    <li>
+                        Compatible<span>2<span class="review-star rate-10 show-one"></span></span>
+                    </li>
+                    <li>
+                        Delivery<span>1<span class="review-star rate-10 show-one"></span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="review-list">
+    {% for review in reviews %}
+        <ul>
+            <li>        
+                <!-- Reviews section -->
+                <div class="response-item mt-4 d-flex">
+                    <div class="left">
+                        <span>
+                            {% if request.user.userprofile.profile_picture %}
+                                <img src="{{ request.user.userprofile.profile_picture.url }}" class="rounded-circle img-fluid responsive-profile-img" alt="Profile Picture">
+                            {% else %}
+                                <img src="{% static 'images/userprofile-default-img.webp' %}" class="rounded-circle img-fluid responsive-profile-img" alt="Default Profile Picture">
+                            {% endif %}
+                        </span>
+                    </div>
+                    <div class="right">
+                        <h4>
+                            {{ review.user.userprofile.first_name }} 
+                            <span class="gig-rating text-body-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15" height="15">
+                                    <path
+                                        fill="currentColor"
+                                        d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"
+                                    ></path>
+                                </svg>
+                                {{ review.rating }}
+
+                                    {% if user.is_authenticated %}
+                                        {% if user.is_superuser %}
+                                            <a class="text-muted ml-3 small" href="{% url 'delete_review' review.id %}">
+                                                <i class="fas fa-trash-alt"></i> Delete Review
+                                            </a>
+                                        {% endif %}
+                                    {% endif %}
+
+                            </span>
+                        </h4>
+                        <div class="country d-flex align-items-center">
+                            <div class="country-name font-accent">{{ review.user.username }} from {{ review.user.userprofile.country }}</div>
+                        </div>
+                        <div class="review-description">
+                            <p>
+                                {{ review.text | linebreaks }}
+                            </p>
+                        </div>
+                        <span class="publish py-3 d-inline-block w-100">Published {{ review.created_at|date:"F j Y"}}</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+        <!-- Write review section -->
+        {% if user.is_authenticated %}
+            {% if has_bought %}
+                <form method="post" action="{% url 'product_detail' product_id=product.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="has_bought" value="{{ has_bought_value }}">
+                    <label for="{{ review_form.text.id_for_label }}" class="font-weight-bold">Write a review</label>
+                    {{ review_form.text | as_crispy_field }}
+                    <p>How would you rate the product overall?</p>
+                    <div class="star-rating d-block mb-4" role="group" aria-labelledby="rating-label">
+                        <input type="radio" name="rating" value="1" id="rating-1" aria-label="1 Star"><i></i>
+                        <input type="radio" name="rating" value="2" id="rating-2" aria-label="2 Stars"><i></i>
+                        <input type="radio" name="rating" value="3" id="rating-3" aria-label="3 Stars"><i></i>
+                        <input type="radio" name="rating" value="4" id="rating-4" aria-label="4 Stars"><i></i>
+                        <input type="radio" name="rating" value="5" id="rating-5" aria-label="5 Stars"><i></i>
+                    </div>
+                    <button type="submit" class="btn btn-black rounded-0 text-uppercase">Submit</button>
+                </form>
+            {% else %}
+                <p>You can only write a review for products you have bought.</p>
+            {% endif %}
+        {% else %}
+            <p>You must be logged in to write a review for products. <span><a href="{% url 'account_login' %}"> Login now</a></span></p>
+        {% endif %}
+</div>

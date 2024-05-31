@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Warranty policy {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container main-content-container h-100">
+        <article>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <hr>
+                    <h2 class="logo-font mb-4">Warranty Policy</h2>
+                    <h3 class="text-muted">Warranty policy for Easy Keyboard Maker</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    <p class="small text-muted">Last Updated: 2023-12-12</p>
+                    <section>
+                        <h4>1. Warranty Coverage:</h4>
+                        <ul>
+                            <li>Easy Keyboard Maker offers a limited warranty on keyboards and keycaps sold directly through
+                                our
+                                official website or authorized resellers.</li>
+                            <li>The warranty covers defects in materials and workmanship under normal use for a period of 6
+                                months from the date of purchase.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>2. What Is Covered:</h4>
+                        <ul>
+                            <li>Defects in materials and workmanship.</li>
+                            <li>Keycaps' fading or discoloration under normal use.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>3. What Is Not Covered:</h4>
+                        <ul>
+                            <li>Damage resulting from accidents, misuse, abuse, or unauthorized modifications.</li>
+                            <li>Normal wear and tear, including but not limited to scratches or cosmetic damage.</li>
+                            <li>Products purchased from unauthorized sellers or outlets.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>4. Making a Warranty Claim:</h4>
+                        <ul>
+                            <li>To make a warranty claim, please fill out our contact form <a
+                                    href="{% url 'contact' %}">here</a>.</li>
+                            <li>Include the following information in your claim:
+                                <ul>
+                                    <li>Proof of purchase (order number and date).</li>
+                                    <li>Clear photos or videos showing the defect.</li>
+                                </ul>
+                            </li>
+                            <li>Easy Keyboard Maker will review the claim and, at its discretion, provide a replacement or
+                                issue
+                                a refund.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>5. Exclusions and Limitations:</h4>
+                        <ul>
+                            <li>The warranty is non-transferable and applies only to the original purchaser.</li>
+                            <li>Easy Keyboard Maker reserves the right to refuse warranty coverage if the claim does not
+                                meet
+                                the specified conditions.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>6. Shipping Costs:</h4>
+                        <ul>
+                            <li>Customers are responsible for any shipping costs associated with returning the product for
+                                warranty evaluation.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>7. Modification of Terms:</h4>
+                        <ul>
+                            <li>Easy Keyboard Maker reserves the right to modify or terminate the warranty policy at any
+                                time.
+                                Customers will be notified of any changes.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>8. Contact Us:</h4>
+                        <ul>
+                            <li>If you have any questions about our warranty policy, please contact us <a
+                                    href="{% url 'contact' %}">here</a>.</li>
+                        </ul>
+
+                        <p>By purchasing products from Easy Keyboard Maker, you acknowledge that you have read and agreed to
+                            the
+                            terms and conditions of this Warranty Policy.</p>
+
+                        <p>Easy Keyboard Maker<br>
+                            support@easykeyboardmaker.com<br>
+                            privacy@easykeyboardmaker.com<br>
+                            (+46) 73 688 63 30</p>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}

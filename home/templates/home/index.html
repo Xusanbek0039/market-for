@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container-index">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!-- header img section -->
+    <section class="main-content ">
+        <div class="main-image">
+            <div class="overlay-header"></div>
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-7 col-md-6 my-auto">
+                        <span class="text-black font-weight-bold">Akko - KBDfans - Ducky - Keychron</span>
+                        <h1 class="display-4 logo-font text-black">
+                            The new keyboards are here
+                        </h1>
+                        <div class="my-5">
+                            <h4>
+                                <a href="{% url 'products' %}"
+                                    class="shop-now-button btn btn-lg rounded-5 text-uppercase py-3">Shop Now</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container section-margin-bottom">
+        <div class="row d-md-flex justify-content-between">
+            <p class="col-md-4 text-center text-muted small mb-3 mb-md-0 d-md-block"><i class="fa-solid fa-truck-fast"></i> Free Shipping above 75$</p>
+            <p class="col-md-4 text-center text-muted small mb-3 mb-md-0 d-md-block"><i class="fa-solid fa-boxes-packing"></i> 30-day No-hassle Returns</p>
+            <p class="col-md-4 text-center text-muted small mb-3 mb-md-0 d-md-block"><i class="fas fa-lock"></i> Safe Payments</p>
+        </div>
+    </div>
+
+    <!-- Shop by category section -->
+    <section class="section-margin-bottom">
+        <div class="container mt-5 text-center">
+            <div class="col-12 mb-4">
+                <h3 class="text-black">
+                    Shop by Category
+                </h3>
+                <p><a href="{% url 'products' %}" class="text-muted small">Shop now</a></p>
+            </div>
+        </div>
+
+        <div class="container mb-5">
+            <div class="row justify-content-center ">
+
+                <div class="m-3 card-category mx-auto  text-center shadow-lg mb-5">
+                    <a href="{% url 'products' %}?category=100,75,65,60,40,mechanical" class="text-decoration-none text-black">
+                    <img src="{% static 'images/category-keyboards.webp' %}" class="img-fluid" alt="Category Keyboards">
+                    <p class="font-weight-bold mt-2 text-uppercase">Keyboards</p></a>
+                </div>
+
+                <div class="m-3 card-category mx-auto  text-center shadow-lg mb-5">
+                    <div class="text-center">
+                        <a href="{% url 'products' %}?category=abs,pbt,rubber,custom_made" class="text-decoration-none text-black">
+                        <img src="{% static 'images/category-keycaps.webp' %}" class="img-fluid" alt="Category Keycaps">
+                        <p class="font-weight-bold mt-2 text-uppercase">Keycaps</p></a>
+                    </div>
+                </div>
+
+                <div class="m-3 card-category mx-auto  text-center shadow-lg mb-5">
+                    <a href="{% url 'products' %}?category=tools" class="text-decoration-none text-black">
+                    <img src="{% static 'images/category-switches.webp' %}" class="img-fluid" alt="Category Switches">
+                    <p class="font-weight-bold mt-2 text-uppercase">Switches</p></a>
+                </div>
+
+                <div class="m-3 card-category mx-auto  text-center shadow-lg mb-5">
+                    <a href="{% url 'products' %}?category=100,75,65,60,40,mechanical" class="text-decoration-none text-black">
+                    <img src="{% static 'images/category-tools.webp' %}" class="img-fluid" alt="Category Tools">
+                    <p class="font-weight-bold mt-2 text-uppercase">Tools</p></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe section -->
+    <section class="container-grid p-5 position-relative overflow-hidden section-margin-bottom">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row">
+                <div class="subscribe-content  d-flex flex-wrap justify-content-center align-items-center p-4 shadow">
+                    <div class="col-md-6 col-sm-12 "> 
+                        <div class="display-header pe-3">
+                            <h2 class="text-uppercase text-white">Subscribe Now</h2>
+                            <p class="text-muted text-small">Get the latest news, updates, and deals directly mailed to your
+                                inbox.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12 text-center"> 
+                            <form class="subscription-form validate" action="{% url 'subscribe' %}" method="post">
+                                {% csrf_token %}
+                                <div class="input-group flex-wrap">
+                                    <label class="visually-hidden" for="email">Your Email:</label>
+                                    <input class="form-control rounded-0" id="email" type="email" name="email" placeholder="Your email"
+                                        required="" autocomplete="email">
+                                    <button class="btn btn-medium btn-primary rounded-0 text-uppercase" type="submit"
+                                        name="subscribe">Subscribe</button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrival section -->
+    <section class="section-margin-bottom">
+        <div class="container mt-5 text-center">
+            <div class="col-12 mb-4">
+                <h3 class="text-black">
+                    New arrival
+                </h3>
+                <p><a href="{% url 'products' %}" class="text-muted small">Shop now</a></p>
+            </div>
+        </div>
+
+        <div class="container mb-5">
+            <div class="row justify-content-center">
+
+                {% for product in products|slice:":4" %}
+                    <div class="m-3 card-category mx-auto text-center border-2-black shadow-lg mb-5">
+                        <div class="new-mark bg-black text-white">
+                            <div>
+                                New!
+                            </div>
+                        </div>
+                        <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-black">
+                            {% if product.image %}
+                                <!-- Image rendering -->
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                                <img class="card-img-top img-fluid" src="{% static 'images/product-default_img.webp' %}" alt="{{ product.name }}">
+                            {% endif %}
+                            <p class="font-weight-bold mt-2 text-uppercase mb-2">{{ product.name }}</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Text divider section -->
+    <section class="section-margin-bottom">
+        <div class="container">
+            <div class="ml-2 mr-2 section-margin-bottom">
+                <h2 class="text-black text-center text-devider">Affordable pricing for designs crafted by the community!</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog post section -->
+    <section class="section-margin-bottom">
+        <div class="container mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col mb-4">
+                        <h3 class="text-black d-inline">
+                            Articles & Guides
+                        </h3>
+                        <p class="float-right"><a href="{% url 'blog' %}" class="text-muted small">View all</a></p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    {% for post in posts %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                {% if post.featured_image %}
+                                    <a href="{% url 'post_detail' post.slug %}">
+                                        <img src="{{ post.featured_image.url }}" class="image-fit"
+                                            alt="{{ post.title }}"></a>
+                                {% else %}
+                                <a href="{% url 'post_detail' post.slug %}">
+                                    <img src="{% static 'images/article-default_img.webp' %}" class="image-fit"
+                                        alt="{{ post.title }}"></a>
+                                {% endif %}
+                                <p class="card-text text-uppercase text-monospace mt-2">{{ post.created_on|date:"F j Y"}}
+                                </p>
+                                <h5 class="card-title">{{ post.title }}</h5>
+                            </div>
+                        </div>
+                        <hr class="d-md-none">
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

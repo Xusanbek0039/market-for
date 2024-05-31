@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Partners {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container main-content-container h-100">
+        <article>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <hr>
+                    <h2 class="logo-font mb-4">Partners</h2>
+                    <h3 class="text-muted">Collaberation partners with EKM</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <section>
+                        <h3>Why Partner with EKM?</h3>
+                        <p>At EKM, we believe that collaboration is the key to success. By joining forces with like-minded
+                            partners, we accelerate growth, foster innovation, and create unparalleled value for our
+                            customers.</p>
+
+                        <h4>Innovation at its Core</h4>
+                        <p>EKM is at the forefront of innovation in the keyboard manufacturing industry. Our commitment to
+                            pushing boundaries and embracing new technologies ensures that our partners are always part of
+                            groundbreaking developments.</p>
+
+                        <h4>Mutual Growth</h4>
+                        <p>Our partnerships are built on the principles of mutual growth. Together, we embark on a journey
+                            to expand our reach, enhance our capabilities, and achieve shared success. Your success is our
+                            success.</p>
+
+                        <h4>Dedicated Support</h4>
+                        <p>EKM values its partners and provides dedicated support to ensure a seamless collaboration
+                            experience. From technical assistance to marketing support, our team is committed to helping our
+                            partners thrive.</p>
+                    </section>
+
+                    <section>
+                        <h3>Our Collaborators</h3>
+
+                        <article>
+                            <h3 class="text-muted">Will you be the first one?</h3>
+                            <p>....</p>
+                        </article>
+                    </section>
+
+                    <section>
+                        <h3>Join Us on this Journey</h3>
+                        <p>Are you interested in exploring collaboration opportunities with Easy Keyboard Maker? We welcome
+                            partnerships that align with our values and commitment to excellence. Let's embark on a journey
+                            of innovation and success together.</p>
+
+                        <p>To express your interest or inquire about collaboration opportunities, please contact our <a
+                                href="{% url 'contact_form' %}">Partnership Team</a> or reach out to us at <a
+                                href="mailto:support@easykeyboardmaker.com">support@easykeyboardmaker.com</a></p>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}

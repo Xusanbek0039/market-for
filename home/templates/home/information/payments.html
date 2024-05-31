@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Payment {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container main-content-container h-100">
+        <article>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <hr>
+                    <h2 class="logo-font mb-4">Payment</h2>
+                    <h3 class="text-muted">Terms of Payment</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <section>
+                        <p>Make a secure payment using Stripe, a trusted payment gateway. Your payment details are encrypted
+                            and
+                            processed securely.</p>
+
+                        <!-- Stripe's Terms and Conditions -->
+                        <div class="mt-4">
+                            <h4>Stripe's Terms and Conditions</h4>
+                            <p>Before making a payment, please review <a href="https://stripe.com/terms" target="_blank">Stripe's terms and
+                                    conditions</a>.</p>
+                        </div>
+
+                        <!-- Terms of Payment -->
+                        <div class="mt-4">
+                            <h4>Terms of Payment</h4>
+                            <p>Please read the following terms before making a payment:</p>
+                            <ul>
+                                <li>Payment is non-refundable.</li>
+                                <li>By making a payment, you agree to our terms and conditions.</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}

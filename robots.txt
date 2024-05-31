@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /checkout/
+Sitemap: https://easykeyboardmaker-ffb468c2d2d7.herokuapp.com/sitemap.xml

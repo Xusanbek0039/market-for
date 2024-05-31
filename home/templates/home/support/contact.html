@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block extra_title %} - Support {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div> <!-- Making overlay over the background image to white background instead -->
+<div class="container-fluid main-content-container h-100">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Support</h2>
+            <hr class="w-50 mb-1"><!-- Hr line for devision -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-3">
+
+            <div class="card m-2 text-center" style="max-width: 18rem;">
+                <div class="card-header"><i class="fa-solid fa-envelope fa-2xl"></i></div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title">General enquiries</h5>
+                  <p class="card-text">Would you like to discuss your busniess needs? Our team will be delighted to assist you.</p>
+                  </div>
+                  <a href="{% url 'contact_form' %}" class="btn btn-black rounded-0 text-uppercase">Contact us</a>
+              </div>
+
+              <div class="card m-2 text-center" style="max-width: 18rem;">
+                <div class="card-header"><i class="fa-solid fa-comments fa-2xl"></i></div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title">Speak to support</h5>
+                  <p class="card-text">We are available for you 24/7. Save time by stating your support request online on our discord server.</p>
+                  </div>
+                  <a href="https://discord.gg/TvfXuBg7ZU" target="_blank" class="btn btn-black rounded-0 text-uppercase">Get support</a>
+              </div>
+
+        <div class="w-100 m-3"></div>
+
+
+        <div class="card m-2 text-center" style="max-width: 18rem;">
+            <div class="card-header"><i class="fa-solid fa-folder-open fa-2xl"></i></div>
+            <div class="card-body text-dark">
+              <h5 class="card-title">Feature request</h5>
+              <p class="card-text text-muted">Share your ideas on new functionalities to make us even better as company. Suggest, discuss with us.</p>
+            </div>
+            <a href="{% url 'contact_form' %}" class="btn btn-black rounded-0 text-uppercase">Feature request</a>
+          </div>
+
+
+          <div class="card m-2 text-center" style="max-width: 18rem;">
+            <div class="card-header"><i class="fa-solid fa-handshake fa-2xl"></i></div>
+            <div class="card-body text-dark">
+              <h5 class="card-title">Partner with us</h5>
+              <p class="card-text">Interested in becoming a partner? We're excited to hear about your plans and future.</p>
+            </div>
+             <a href="{% url 'partners' %}" class="btn btn-black rounded-0 text-uppercase">Become a partner</a>
+          </div>
+
+        </div>
+    </div>
+    
+    <!-- FAQ Area-->
+    <div class="faq_area section_padding_130" id="faq">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                        <h3><span>Frequently </span> Asked Questions</h3>
+                        <p>Explore FAQs about our retail keyboards and custom keycaps. Find answers to common queries on orders, customization, and product maintenance.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-lg-8">
+                    <div class="accordion faq-accordian" id="faqAccordion">
+                        <!-- Question 1 -->
+                        <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <div class="card-header" id="headingOne">
+                                <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Why is my order taking so long?<span class="lni-chevron-up"></span></h6>
+                            </div>
+                            <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p>We apologize for any delay in your order. Our team is working diligently to process and dispatch orders promptly.</p>
+                                    <p>DHL's standard delivery times apply, and we appreciate your patience as your products make their way to you. If you have specific concerns, feel free to contact our support team for further assistance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 2 -->
+                        <div class="card border-0 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                            <div class="card-header" id="headingTwo">
+                                <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">How do i get in touch?<span class="lni-chevron-up"></span></h6>
+                            </div>
+                            <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p>You can reach us through various channels:</p>
+                                    <ul>
+                                        <li>Fill out our <a href="{% url 'contact_form' %}">Contact Us</a> form on the website.</li>
+                                        <li>Join our Discord server for real-time assistance and community interactions.</li>
+                                        <li>Email us at  "support@easykeyboardmaker.com" for any specific requests or inquiries.</li>
+                                        <li>Connect with us on social media for updates and news: follow us on <a href="https://www.facebook.com/profile.php?id=100086486033251">Facebook</a>, <a href="https://twitter.com/keyboard_maker">Twitter</a>, and <a href="https://www.instagram.com/easykeyboardmaker/">Instagram</a>.</li>
+                                    </ul>
+                                    <p>We're here to help and also share exciting updates with our community!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 3 -->
+                        <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="card-header" id="headingThree">
+                                <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">What is your return policy?<span class="lni-chevron-up"></span></h6>
+                            </div>
+                            <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p>We offer a 15 to 30-day return policy. For more details, including how to initiate a return, please visit our <a href="{% url 'return_policy' %}">Return Policy</a> page.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 4 -->
+                        <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                            <div class="card-header" id="headingFour">
+                                <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Is my personal information secure?<span class="lni-chevron-up"></span></h6>
+                            </div>
+                            <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p>We take the security of your personal information seriously. Our website employs industry-standard encryption and security measures to safeguard your data. In compliance with the General Data Protection Regulation (GDPR), we prioritize the privacy and protection of your information. For more details, please refer to our <a href="{% url 'privacy_policy' %}">Privacy Policy</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Support Button-->
+                    <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                        <i class="lni-emoji-sad"></i>
+                        <p class="mb-0 px-2">Can't find your answers?</p>
+                        <a href="{% url 'contact_form' %}"> Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="w-50 mb-1"><!-- Hr line for devision -->
+
+
+
+</div>
+{% endblock %}

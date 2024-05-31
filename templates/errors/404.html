@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} 404 {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!-- Error handler 404 page -->
+    <section>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <hr>
+                    <h2 class="logo-font mb-4">Error</h2>
+                    <h5 class="text-muted">404 Message</h5>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h1>"Not Found"</h1>
+                    <h3>Oh snap! The page went on a coffee break. How about we redirect you to the land of cat memes instead?</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

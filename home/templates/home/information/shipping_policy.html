@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Shipping policy {% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container main-content-container h-100">
+        <article>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <hr>
+                    <h2 class="logo-font mb-4">Shipping policy</h2>
+                    <h3 class="text-muted">EU & World Wide Shipments</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <section>
+                        <h4 class="mb-4 mt-2">Europe Shipments</h4>
+
+                        <p><strong>Standard Shipping:</strong> All orders are shipped via standard shipping and typically
+                            take 5-7 business days to arrive.</p>
+
+                        <p><strong>Expedited Shipping:</strong> Expedited shipping options are available at an additional
+                            cost, providing faster delivery within 2-3 business days.</p>
+
+                        <p><strong>Order Processing:</strong> Orders placed before 2pm GMT will be shipped out the same day.
+                            Orders placed after 2pm GMT will be shipped out the next business day.</p>
+
+                        <p><strong>Customs and Import Duties:</strong> Please be aware that we are not responsible for any
+                            customs or import duties that may be charged on orders shipped outside of the UK. The recipient
+                            is responsible for paying any additional charges for customs clearance.</p>
+                    </section>
+                    <section>
+                        <h4 class="mb-4 mt-4">Rest of the World Shipments</h4>
+
+                        <p><strong>Standard Shipping:</strong> All international orders outside of Europe are shipped via
+                            standard shipping, and delivery times may vary depending on the destination. Please allow extra
+                            time for customs clearance.</p>
+
+                        <p><strong>Expedited Shipping:</strong> Expedited shipping options are available for international
+                            orders at an additional cost, providing faster delivery. Delivery times may vary based on the
+                            destination country.</p>
+
+                        <p><strong>Order Processing:</strong> Orders are processed promptly, and shipping times will depend
+                            on the chosen shipping method and the destination.</p>
+
+                        <p><strong>Customs and Import Duties:</strong> International customers are responsible for any
+                            customs or import duties that may be charged by the destination country. The recipient is
+                            responsible for paying any additional charges for customs clearance.</p>
+
+                        <p class="mt-5">Thank you for choosing us for your keyboard needs! If you have any questions about
+                            our shipping policy, feel free to <a href="{% url 'contact_form' %}">contact us</a>.</p>
+                    </section>
+                </div>
+            </div>
+        </article>
+    </div>
+{% endblock %}

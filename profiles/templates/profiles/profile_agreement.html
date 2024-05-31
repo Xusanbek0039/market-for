@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - User Agreement {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profiles.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div> <!-- Making overlay over the background image to white background instead -->
+    <div class="container main-content-container h-75">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">User Agreement</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <section class="mb-2">
+                    <h3>Info</h3>
+                    <p>This User Agreement is entered into by and between you and Easy Keyboard Maker
+                        us. This Agreement governs your use of our E-commerce Platform Easy Keyboard Maker.</p>
+                    <p>By accessing or using the Platform, you agree to be bound by the terms and conditions set forth in
+                        this
+                        Agreement. If you do not agree to these terms, please do not use the Platform.</p>
+                </section>
+
+                <section class="mb-4">
+                    <h3>1. Account Registration</h3>
+                    <p>1.1. To access certain features of the Platform, you may be required to register for an account. You
+                        agree to
+                        provide accurate, current, and complete information during the registration process.</p>
+                    <p>1.2. You are responsible for maintaining the confidentiality of your account and password and for
+                        restricting
+                        access to your account.</p>
+                </section>
+
+                <section class="mb-4">
+                    <h3>2. User Responsibilities</h3>
+                    <p>2.1. You agree to use the Platform in accordance with all applicable laws and regulations.</p>
+                    <p>2.2. You are solely responsible for the content you post or transmit on the Platform.</p>
+                </section>
+
+                <section class="mb-4">
+                    <h3>3. Termination of Account</h3>
+                    <p>3.1. We reserve the right to terminate or suspend your account at our discretion without notice,
+                        especially in
+                        cases of violation of this Agreement.</p>
+                    <p>3.2. You may terminate your account at any time by following the designated process on the Platform.
+                    </p>
+                </section>
+
+                <section class="mb-4">
+                    <h3>4. Data Protection and Privacy</h3>
+                    <p>4.1. We are committed to protecting your privacy. Please review our Privacy Policy to understand how
+                        we collect,
+                        use, and disclose your personal information.</p>
+                </section>
+
+                <section class="mb-4">
+                    <h3>5. Changes to the Agreement</h3>
+                    <p>5.1. We reserve the right to modify or update this Agreement at any time. Your continued use of the
+                        Platform
+                        after such changes constitutes acceptance of the modified Agreement.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h3>6. Contact Information</h3>
+                    <p>6.1. If you have any questions or concerns about this Agreement, please contact us at <span
+                            class="font-weight-bold">support@easykeyboardmaker.com</span></p>
+                </section>
+                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 text-uppercase mb-2"> Back</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}

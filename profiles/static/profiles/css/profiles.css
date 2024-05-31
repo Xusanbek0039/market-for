@@ -1,0 +1,36 @@
+/* Only Stylesheet for profile templates */
+
+#profile-update-form .form-control {
+    color: #000;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4 !important;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
+.order-history {
+    max-height: 750px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+.responsive-profile-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+@media (max-width:768px) {
+    .col-12.col-md-6.col-lg-4.mb-5.userimage,
+    .col-12.col-lg-6.mb-5.userimage {
+        text-align: center;
+    }
+}

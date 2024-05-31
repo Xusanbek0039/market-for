@@ -1,0 +1,6 @@
+{% load static %}
+{% if item.product.image %}
+    <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+{% else %}
+    <img class="img-fluid rounded" src="{% static 'images/product-default_img.webp' %}" alt="{{ item.product.name }}">
+{% endif %}
